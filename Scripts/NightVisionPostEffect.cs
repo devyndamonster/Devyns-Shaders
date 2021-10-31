@@ -44,6 +44,7 @@ public class NightVisionPostEffect : MonoBehaviour
         if (!renderBloom)
         {
 			Graphics.Blit(nightDest, dest);
+			RenderTexture.ReleaseTemporary(nightDest);
 			return;
 		}
 
